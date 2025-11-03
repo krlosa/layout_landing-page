@@ -1,22 +1,399 @@
 <!doctype html>
-<html lang="en">
+<html
+  class="page"
+  lang="en"
+>
   <head>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Landing Page</title>
+    <title>MYBIKE</title>
     <link
       rel="stylesheet"
       href="./styles/main.scss"
+    />
+    <link
+      rel="shortcut icon"
+      href="./images/MyBIKE-32x32.png"
+      type="image/x-icon"
     />
     <script
       src="scripts/main.js"
       defer
     ></script>
   </head>
-  <body>
-    <h1>Landing Page</h1>
+  <body class="page__corpo">
+    <header
+      class="cabecalho menu"
+      id="cabecalho"
+    >
+      <div class="cabecalho__superior">
+        <a href="#cabecalho">
+          <img
+            src="./images/MyBIKE-logo-320.png"
+            alt="MyBIKE logo"
+            class="logo"
+          />
+        </a>
+
+        <div class="cabecalho__superior__icones">
+          <a
+            href="tel:+1 234 5555-55-55"
+            class="icone icone--telefone"
+          ></a>
+
+          <a
+            href="#menu"
+            class="icone icone--menu"
+          ></a>
+        </div>
+      </div>
+
+      <div class="cabecalho__inferior">
+        <h1 class="cabecalho__titulo">Take the Streets</h1>
+      </div>
+    </header>
+
+    <aside
+      class="menu--lateral menu page__menu"
+      id="menu"
+    >
+      <div class="menu--lateral__cabecalho">
+        <a href="#cabecalho">
+          <img
+            src="./images/MyBIKE-menu-logo-320.png"
+            alt="MyBIKE-logo"
+            class="logo"
+          />
+        </a>
+        <a
+          href="#cabecalho"
+          class="icone icone--fechar"
+        ></a>
+      </div>
+
+      <nav class="menu--lateral__itens">
+        <ul class="menu--lateral__lista">
+          <li class="menu--lateral__lista__item">
+            <a
+              class="menu--lateral__link"
+              href="#cabecalho"
+            >
+              Home
+            </a>
+          </li>
+          <li class="menu--lateral__lista__item">
+            <a
+              class="menu--lateral__link"
+              href="#about-us"
+            >
+              About Us
+            </a>
+          </li>
+          <li class="menu--lateral__lista__item">
+            <a
+              class="menu--lateral__link"
+              href="#compare-bikes"
+            >
+              Compare Bikes
+            </a>
+          </li>
+          <li class="menu--lateral__lista__item">
+            <a
+              class="menu--lateral__link"
+              href="#details"
+            >
+              Details
+            </a>
+          </li>
+          <li class="menu--lateral__lista__item">
+            <a
+              class="menu--lateral__link"
+              href="#contact"
+            >
+              Contact Us
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="menu--lateral__rodape">
+        <a
+          class="menu--lateral__link"
+          href="tel:+1 234 5555-55-55"
+        >
+          <p>+1 234 5555-55-55</p>
+        </a>
+        <a
+          class="menu--lateral__link"
+          href="#"
+        >
+          Book a test ride
+        </a>
+      </div>
+    </aside>
+
+    <main class="principal">
+      <section
+        class="principal__sessao move-free"
+        id="about-us"
+      >
+        <h2 class="move-free__subtitulo principal__subtitulo">Move Free</h2>
+        <p class="move-free__texto center">
+          Shift your ride,
+          <br />
+          not gears. Find the fastest
+          <br />
+          way to move in the city
+          <br />
+          as the bike adapts
+          <br />
+          intuitively to power the
+          <br />
+          speed you need.
+        </p>
+      </section>
+
+      <section
+        class="principal__sessao compare-bikes"
+        id="compare-bikes"
+      >
+        <h2 class="principal__subtitulo compare-bikes__subtitulo">
+          Compare bikes
+        </h2>
+        <article class="principal__bloco bike-1">
+          <img
+            class="compare-bikes__img"
+            src="./images/sporty-4.png"
+            alt="sporty 4 bike"
+          />
+          <h3 class="destaque">Sporty 4</h3>
+          <p class="compare-bikes__descricao">
+            The iconic frame brought to a new performance height as a sporty,
+            <br />
+            active ride.
+          </p>
+          <p class="destaque">$ 2 590</p>
+        </article>
+        <article class="principal__bloco bike-2">
+          <img
+            class="compare-bikes__img"
+            src="./images/ride-in-town.png"
+            alt="ride in town bike"
+          />
+          <h3 class="destaque">Ride in town ST</h3>
+          <p class="compare-bikes__descricao">
+            An open frame for an upright
+            <br />
+            riding position as the most
+            <br />
+            comfortable ride in town.
+          </p>
+          <p class="destaque">$ 2 590</p>
+        </article>
+        <article class="principal__bloco bike-3">
+          <img
+            class="compare-bikes__img"
+            src="./images/agile-ride-3.png"
+            alt="agile ride 3 bike"
+          />
+          <h3 class="destaque">Agile ride 3</h3>
+          <p class="compare-bikes__descricao">
+            The lightweight frame that has
+            <br />
+            earned its street tread as a sleek,
+            <br />
+            agile ride.
+          </p>
+          <p class="destaque">$ 2 090</p>
+        </article>
+      </section>
+
+      <section
+        class="principal__sessao details"
+        id="details"
+      >
+        <h2 class="principal__subtitulo details__subtitulo">The Details</h2>
+        <div class="principal__bloco">
+          <div class="details__imagens">
+            <img
+              class="details__img img-1"
+              src="./images/details-1.png"
+              alt="Suporte para celular frontal"
+            />
+            <img
+              class="details__img img-2"
+              src="./images/details-2.png"
+              alt="Suporte para celular traseiro"
+            />
+          </div>
+          <h3 class="destaque">Auto Unlock</h3>
+          <p>
+            The app senses when you're
+            <br />
+            nearby to unlock automatically.
+            <br />
+            GPS tracking so you know where
+            <br />
+            your bike is and can track it
+            <br />
+            anytime.
+          </p>
+        </div>
+        <div class="principal__bloco">
+          <div class="details__imagens">
+            <img
+              class="details__img img-1"
+              src="./images/details-3.png"
+              alt="Suporte para celular frontal"
+            />
+            <img
+              class="details__img img-2"
+              src="./images/details-4.png"
+              alt="Suporte para celular traseiro"
+            />
+          </div>
+          <h3 class="destaque">Range & Integrated lights</h3>
+          <p>
+            The removable battery has up to
+            <br />
+            70km battery autonomy and
+            <br />
+            weighs only 2.4 kg.
+            <br />
+            Lights integrated into the frame give you always-on visibility day
+            and night.
+            <br />
+            Anytime.
+          </p>
+        </div>
+        <div class="principal__bloco">
+          <div class="details__imagens">
+            <img
+              class="details__img img-2"
+              src="./images/details-5.png"
+              alt="Suporte para celular frontal"
+            />
+            <img
+              class="details__img img-1"
+              src="./images/details-6.png"
+              alt="Suporte para celular traseiro"
+            />
+          </div>
+          <h3 class="destaque">Hydraulic disc brakes & Lightweight</h3>
+          <p>
+            Brakes with total stopping power
+            <br />
+            the second you make contact. The
+            <br />
+            removable battery has up to 70km
+            <br />
+            battery autonomy and weighs
+            <br />
+            only 2.4 kg. Lights integrated into
+            <br />
+            the frame give you always-on
+            <br />
+            visibility day and night.
+          </p>
+        </div>
+      </section>
+
+      <a
+        href="#"
+        class="button"
+      >
+        Explore
+      </a>
+
+      <section
+        class="principal__sessao contato"
+        id="contact"
+      >
+        <h2 class="principal__subtitulo contato__subtitulo">Contact us</h2>
+        <div class="contato__box">
+          <div class="form">
+            <form
+              onsubmit="this.reset(); return false;"
+              action="#"
+              class="contato__form"
+            >
+              <label
+                for="nome"
+                class="contato__label"
+              >
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  class="contato__input"
+                  placeholder="Name"
+                />
+              </label>
+
+              <label
+                for="email"
+                class="contato__label"
+              >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="contato__input"
+                  placeholder="Email"
+                />
+              </label>
+
+              <textarea
+                name="mensagem"
+                id="mensagem"
+                class="contato__message"
+                placeholder="Message"
+              ></textarea>
+
+              <a
+                href="#"
+                class="button"
+              >
+                Send
+              </a>
+            </form>
+          </div>
+
+          <div class="bloco-contato">
+            <h3 class="bloco-contato__titulo">Phone</h3>
+
+            <a
+              class="bloco-contato__link"
+              href="tel:+1 234 5555-55-55"
+            >
+              <p class="bloco-contato__texto">+1 234 5555-55-55</p>
+            </a>
+
+            <h3 class="bloco-contato__titulo">Email</h3>
+
+            <p class="bloco-contato__texto">my@email.com</p>
+
+            <h3 class="bloco-contato__titulo">Address</h3>
+            <a
+              class="bloco-contato__link"
+              target="_blank"
+              href="https://maps.app.goo.gl/VCFoWiUyGATwZfUh7"
+            >
+              <p class="bloco-contato__texto">
+                400 first ave.
+                <br />
+                suite 700
+                <br />
+                Minneapolis, MN 55401
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="rodape"></footer>
   </body>
 </html>

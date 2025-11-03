@@ -1,0 +1,201 @@
+/* #region mixins */
+@mixin hover($propriedade, $valor) {
+  transition: $propriedade 0.3s;
+
+  &:hover {
+    #{$propriedade}: $valor;
+  }
+}
+
+@mixin tamanho($point) {
+  @if $point == medium {
+    @media (min-width: 744px) {
+      @content;
+    }
+  } @else if $point == large {
+    @media (min-width: 1260px) {
+      @content;
+    }
+  }
+}
+
+/* #endregion */
+
+.menu {
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* #region cabecalho */
+.cabecalho {
+  background-image: url('../images/Cover_photo-1260.png');
+  background-size: cover;
+  background-position: 90%;
+
+  padding: 24px 20px 40px;
+  justify-content: space-between;
+  text-align: center;
+
+  &__superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__icones {
+      display: flex;
+      gap: 24px;
+    }
+  }
+
+  &__titulo {
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: -1.5px;
+  }
+}
+
+.logo {
+  display: flex;
+  width: 130px;
+  height: 38px;
+}
+
+/* #endregion */
+
+/* #region menu lateral */
+.menu--lateral {
+  background-color: #c2c2c2;
+  color: #1d1d1d;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 24px 20px;
+
+  &__cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__lista {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 40px;
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: 2px;
+    gap: 32px;
+  }
+
+  &__rodape {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 16px;
+    line-height: 27px;
+
+    a:last-child {
+      border-bottom: 2px solid #1d1d1d;
+      padding-bottom: 4px;
+      display: inline-block;
+      width: fit-content;
+    }
+  }
+
+  &__link {
+    all: unset;
+    cursor: pointer;
+  }
+}
+
+/* #endregion */
+
+/* #region icones */
+.icone {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+
+  @include hover(transform, scale(1.2));
+}
+
+.icone--telefone {
+  background-image: url('../images/icones/icone-telefone.png');
+}
+
+.icone--menu {
+  background-image: url('../images/icones/icone-menu.png');
+
+  transition: background-image 0.3s;
+  &:hover {
+    background-image: url('../images/icones/icone-menu-hover.png');
+  }
+}
+
+.icone--fechar {
+  background-image: url('../images/icones/menu-close-button.png');
+}
+
+/* #endregion */
+
+@include tamanho(medium) {
+  .logo {
+    width: 187px;
+    height: 56px;
+  }
+
+  .cabecalho {
+    padding: 0;
+
+    &__superior {
+      padding: 36px 72px;
+    }
+  }
+
+  .icone {
+    width: 32px;
+    height: 32px;
+  }
+
+  .cabecalho__titulo {
+    font-size: 64px;
+    padding-bottom: 100px;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+  }
+
+  .menu--lateral {
+    padding: 36px 72px;
+  }
+}
+
+@include tamanho(large) {
+  .cabecalho {
+    background-position: 90% 32%;
+
+    &__superior {
+      padding: 36px 120px;
+    }
+  }
+
+  .icone--telefone:hover::before {
+    content: '+1 234 555-55-55';
+    position: absolute;
+    left: -140px;
+    top: 8px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 2px;
+  }
+
+  .menu--lateral {
+    padding: 36px 120px;
+  }
+}
