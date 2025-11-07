@@ -327,6 +327,8 @@ img:hover {
   .principal {
     &__sessao {
       @include layout(12, 62px, 120px, 120px, 24px);
+
+      justify-content: center;
     }
 
     &__subtitulo {
@@ -335,7 +337,6 @@ img:hover {
   }
 
   .move-free {
-    gap: 24px;
 
     &__subtitulo {
       grid-column: span 6;

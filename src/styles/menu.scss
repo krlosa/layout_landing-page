@@ -26,6 +26,24 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+
+  &__cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__lista {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 40px;
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: 2px;
+    gap: 32px;
+  }
 }
 
 /* #region cabecalho */
@@ -42,11 +60,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    &__icones {
-      display: flex;
-      gap: 24px;
-    }
+  }
+  &__icones {
+    display: flex;
+    gap: 24px;
   }
 
   &__titulo {
@@ -72,24 +89,6 @@
   font-weight: 600;
   text-transform: uppercase;
   padding: 24px 20px;
-
-  &__cabecalho {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__lista {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 0;
-    margin: 24px 0 40px;
-    font-size: 22px;
-    line-height: 22px;
-    letter-spacing: 2px;
-    gap: 32px;
-  }
 
   &__rodape {
     display: flex;
@@ -176,7 +175,12 @@
 
 @include tamanho(large) {
   .cabecalho {
-    background-position: 90% 32%;
+    height: 711px;
+
+    &__titulo {
+      font-size: 80px;
+      padding-bottom: 180px;
+    }
 
     &__superior {
       padding: 36px 120px;

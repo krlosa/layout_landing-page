@@ -19,7 +19,8 @@
   background-image: url('../images/rodape-imagem.png');
   background-size: cover;
   background-position: 135%;
-
+  position: sticky;
+  z-index: -1;
 }
 
 @include tamanho(medium) {
